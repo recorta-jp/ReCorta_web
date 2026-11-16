@@ -11,9 +11,9 @@ from xml.dom import minidom
 
 ROOT = Path(__file__).resolve().parent
 BASE = "https://www.recorta.jp"
-TODAY = "2026-11-09"
+TODAY = "2026-11-16"
 LANGS = ("ja", "en", "es")
-ASSET_VERSION = "20261109-company-values-mobile-nav"
+ASSET_VERSION = "20261116-kt-privacy-update"
 PAGES = ("index", "about", "service", "team", "history", "news")
 SOURCE = Path(r"C:\Users\dalca\OneDrive\Recorta\assets")
 BRAND = ROOT / "assets" / "brand"
