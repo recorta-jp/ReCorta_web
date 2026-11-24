@@ -85,7 +85,7 @@ def org_data() -> dict:
         "name": "ReCorta", "legalName": "合同会社ReCorta",
         "alternateName": ["レコルタ", "ReCorta（レコルタ）"],
         "url": BASE + "/", "logo": BASE + "/assets/brand/recorta-logo.svg",
-        "foundingDate": "2026-09-09", "email": "diegoalonsojapan@gmail.com",
+        "foundingDate": "2026-09-09", "email": "support@recorta.jp",
         "address": {"@type": "PostalAddress", "addressLocality": "西東京市",
                     "addressRegion": "東京都", "addressCountry": "JP"},
         "identifier": {"@type": "PropertyValue", "propertyID": "法人番号",
@@ -205,7 +205,7 @@ def footer(lang: str, t: dict) -> str:
   </a><p>{e(t["tagline"])}</p></div>
   <div class="footer-nav"><h2>{e(t["nav"][0])}</h2>{nav}</div>
   <div><h2>{e(t["contact"])}</h2>
-    <a href="mailto:diegoalonsojapan@gmail.com">diegoalonsojapan@gmail.com</a>
+    <a href="mailto:support@recorta.jp">support@recorta.jp</a>
     <p>{e(t["locationValue"])}</p></div>
 </div><div class="wrap footer-bottom"><span>{e(t["copyright"])}</span></div></footer>'''
 
@@ -334,7 +334,7 @@ def home(lang: str, t: dict, posts: list[dict]) -> str:
 </div></section>
 <section class="contact-band"><div class="wrap contact-row"><div><p class="eyebrow">ReCorta · Nishitokyo</p>
   <h2>{e(t["ctaTitle"])}</h2><p>{e(t["ctaText"])}</p></div>
-  <a class="button button-red" href="mailto:diegoalonsojapan@gmail.com?subject={e(t["contactSubject"])}">{e(t["contact"])} <span aria-hidden="true">↗</span></a>
+  <a class="button button-red" href="mailto:support@recorta.jp?subject={e(t["contactSubject"])}">{e(t["contact"])} <span aria-hidden="true">↗</span></a>
 </div></section>'''
     return shell(lang, "index", t["homeTitle"], t["homeDesc"], body)
 
@@ -360,7 +360,7 @@ def page(lang: str, key: str, t: dict, posts: list[dict]) -> str:
                 (t["founded"], t["foundedValue"]), (t["representative"], t["representativeValue"]),
                 (t["location"], t["locationValue"]), (t["capital"], t["capitalValue"]),
                 (t["business"], t["businessValue"]),
-                (t["emailLabel"], "diegoalonsojapan@gmail.com"),
+                (t["emailLabel"], "support@recorta.jp"),
             ]
         )
         body = content + f'''<section class="section purpose-section"><div class="wrap">
@@ -380,7 +380,7 @@ def page(lang: str, key: str, t: dict, posts: list[dict]) -> str:
   </div><dl class="profile">{rows}</dl>
 </div></section><section class="contact-band"><div class="wrap contact-row">
   <div><p class="eyebrow">ReCorta</p><h2>{e(t["contactButton"])}</h2></div>
-  <a class="button button-red" href="mailto:diegoalonsojapan@gmail.com">{e(t["contact"])} ↗</a>
+  <a class="button button-red" href="mailto:support@recorta.jp">{e(t["contact"])} ↗</a>
 </div></section>'''
     elif key == "service":
         title, desc, label, h1, lead = t["serviceTitle"], t["serviceDesc"], t["serviceKicker"], t["serviceH1"], t["serviceIntro"]
@@ -403,10 +403,10 @@ def page(lang: str, key: str, t: dict, posts: list[dict]) -> str:
     <h2 class="latin">Wildpass</h2><p class="lead">{e(t["eiaDesc"])}</p>
     <ul class="feature-list">{eia_list}</ul><p class="small-note">{e(t["eiaPilot"])}</p>
     <aside class="notice">{e(t["eiaNote"])}</aside>
-    <a class="button button-red" href="mailto:diegoalonsojapan@gmail.com?subject=Wildpass">{e(t["contactButton"])} ↗</a>
+    <a class="button button-red" href="mailto:support@recorta.jp?subject=Wildpass">{e(t["contactButton"])} ↗</a>
   </div></div></section><section class="section consulting"><div class="wrap consulting-grid">
   <div><p class="eyebrow">{e(t["consultTitle"])}</p><h2>{e(t["contactButton"])}</h2></div>
-  <div><p>{e(t["consultText"])}</p><a class="text-link" href="mailto:diegoalonsojapan@gmail.com">{e(t["contact"])} ↗</a></div>
+  <div><p>{e(t["consultText"])}</p><a class="text-link" href="mailto:support@recorta.jp">{e(t["contact"])} ↗</a></div>
 </div></section>'''
     elif key == "team":
         title, desc, label, h1, lead = t["teamTitle"], t["teamDesc"], t["teamKicker"], t["teamH1"], t["teamIntro"]
